@@ -1,0 +1,13 @@
+name: betaine-cbl-motus-analysis
+channels:
+  - conda-forge
+dependencies:
+  - r-base
+  - r-ape
+  - r-data.table
+  - r-dplyr
+  - r-readr
+  - r-readxl
+  - r-stringr
+  - r-tibble
+  - r-tidyr

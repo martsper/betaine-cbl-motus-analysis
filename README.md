@@ -1,15 +1,15 @@
-# Betaine metabolism and cobalamin biosynthesis analysis in mOTUs-db genomes
+# Betaine degradation and cobalamin biosynthesis analysis in mOTUs-db genomes
 
-This repository contains the R workflow used to analyze genomic potential for cobalamin biosynthesis, cobalamin-dependent glycine betaine demethylation, and cobalamin-independent glycine betaine oxidation in high-quality Ocean Microbiomics Database genomes represented in mOTUs-db.
+This repository contains the R workflow used to analyze genomic potential for cobalamin-dependent glycine betaine demethylation, cobalamin biosynthesis, and cobalamin-independent glycine betaine oxidation in mOTUs-db genomes.
 
-The analysis starts from PyHMMER/Pfam count tables, filters for high-quality OMDB genomes, calculates order-level prevalence estimates, and exports iTOL-compatible files for visualization on the GTDB R220 bacterial tree.
+The analysis starts from PyHMMER/Pfam count tables, filters for high-quality genomes (>= 90% completeness, <= 5% contamination), removes genomes that are not part of the Ocean Microbiomics Database (OMDB), calculates order-level prevalences, and exports iTOL-compatible files for visualization on the GTDB R220 bacterial tree.
 
 ## Repository structure
 
 ```text
 .
 ├── scripts/
-│   └── betaine_cbl_analysis.R
+│   └── betaine-cbl-motus-analysis.R
 ├── input_tables/
 ├── input_GTDB/
 ├── output_tables/
@@ -23,8 +23,8 @@ The analysis starts from PyHMMER/Pfam count tables, filters for high-quality OMD
 The analysis can be reproduced using the provided conda environment:
 
 ```bash
-conda env create -f environment.yml
-conda activate betaine-cbl-analysis
+conda env create -f environment_short.yml
+conda activate betaine-cbl-motus-analysis
 ```
 
 ## Input files
@@ -44,12 +44,14 @@ The mOTUs-db representative genome metadata was downloaded from:
 
 ```text
 https://motus-db.org/genome-cols
+(also accessible from microbiomics.io landing page)
 ```
 
 The OMDB genome metadata was downloaded from:
 
 ```text
 https://omdb.microbiomics.io/repository/ocean/genome-cols
+(also accessible from microbiomics.io landing page)
 ```
 
 GTDB R220 files were obtained from:
@@ -63,7 +65,7 @@ https://data.gtdb.ecogenomic.org/releases/release220/220.0/
 Run the workflow from the repository root:
 
 ```bash
-Rscript scripts/betaine_cbl_analysis.R
+Rscript scripts/betaine-cbl-motus-analysis.R
 ```
 
 ## Outputs
@@ -92,15 +94,18 @@ output_itol/itol_colorstrip_groups.txt
 output_itol/itol_bar_n_genomes.txt
 ```
 
-## Notes on input data
+## References
 
-The mOTUs-db representative genome metadata was exported from the mOTUs-db web interface after filtering for genomes with representative status.
+The analysis is part of the following pre-print:
 
-The OMDB genome metadata was exported from the Ocean Microbiomics Database web interface.
+> The glycine betaine-cobalamin feedback loop drives cross-feeding between marine bacteria and algae<br>
+Jonathan Hammer, Myriel Staack, Martin Sperfeld, Tom Haufschild, Nicolai Kallscheuer, Delia A. Narváez-Barragán, Carl-Eric Wegner, Kirsten Küsel, Shinichi Sunagawa, Georg Pohnert, Torsten Schubert, Einat Segev, Christian Jogler.<br>
+bioRxiv 2025.12.19.695462; [https://doi.org/10.64898/2025.12.19.695462](https://doi.org/10.64898/2025.12.19.695462)
 
-The GTDB tree and taxonomy files correspond to GTDB release R220.
+The mOTUs-db genomes were described here:
 
-## Citation
+> The mOTUs online database provides web-accessible genomic context to taxonomic profiling of microbial communities<br>
+Marija Dmitrijeva, Hans-Joachim Ruscheweyh, Lilith Feer, Kang Li, Samuel Miravet-Verde, Anna Sintsova, Daniel R Mende, Georg Zeller, Shinichi Sunagawa.<br>
+Nucleic Acids Research, Volume 53, Issue D1, 6 January 2025, Pages D797–D805, [https://doi.org/10.1093/nar/gkae1004](https://doi.org/10.1093/nar/gkae1004)
 
-If using this workflow, please cite the associated manuscript.
 

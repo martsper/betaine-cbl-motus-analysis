@@ -449,4 +449,3 @@ dependencies:
   - zeromq=4.3.5
   - zipp=3.23.1
   - zstd=1.5.7
-prefix: /nfs/cds-peta/exports/biol_micro_cds_gr_sunagawa/scratch/msperfeld/software/miniconda3/envs/r_env

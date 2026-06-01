@@ -14,7 +14,8 @@ The analysis starts from PyHMMER/Pfam count tables, filters for high-quality gen
 ├── input_GTDB/
 ├── output_tables/
 ├── output_itol/
-├── environment.yml
+├── environment_short.yml
+├── environment_long.yml
 └── README.md
 ```
 

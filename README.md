@@ -110,3 +110,8 @@ Marija Dmitrijeva, Hans-Joachim Ruscheweyh, Lilith Feer, Kang Li, Samuel Miravet
 Nucleic Acids Research, Volume 53, Issue D1, 6 January 2025, Pages D797–D805, [https://doi.org/10.1093/nar/gkae1004](https://doi.org/10.1093/nar/gkae1004)
 
 
+## License
+
+The analysis code in this repository is released under the MIT License; see `LICENSE`.
+
+Input datasets derived from external resources remain subject to their respective licenses, terms of use, and citation requirements.

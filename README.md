@@ -1,6 +1,6 @@
 # Betaine degradation and cobalamin biosynthesis analysis in mOTUs-db genomes
 
-This repository contains the R workflow used to analyze genomic potential for cobalamin-dependent glycine betaine demethylation, cobalamin biosynthesis, and cobalamin-independent glycine betaine oxidation in mOTUs-db genomes.
+This repository contains the R workflow used to analyze genomic potential for cobalamin-dependent glycine betaine demethylation, cobalamin biosynthesis, and cobalamin-independent glycine betaine oxidation in mOTUs-db v4.0 genomes.
 
 The analysis starts from PyHMMER/Pfam count tables, filters for high-quality genomes (>= 90% completeness, <= 5% contamination), removes genomes that are not part of the Ocean Microbiomics Database (OMDB), calculates order-level prevalences, and exports iTOL-compatible files for visualization on the GTDB R220 bacterial tree.
 
@@ -41,18 +41,16 @@ input_GTDB/bac120_r220.tree
 input_GTDB/bac120_taxonomy_r220.tsv.gz
 ```
 
-The mOTUs-db representative genome metadata was downloaded from:
+The mOTUs-db v4.0 representative genome metadata was downloaded from:
 
 ```text
-https://motus-db.org/genome-cols
-(also accessible from microbiomics.io landing page)
+https://motus-db.org/
 ```
 
 The OMDB genome metadata was downloaded from:
 
 ```text
-https://omdb.microbiomics.io/repository/ocean/genome-cols
-(also accessible from microbiomics.io landing page)
+https://omdb.microbiomics.io/
 ```
 
 GTDB R220 files were obtained from:
@@ -103,7 +101,7 @@ The analysis is part of the following pre-print:
 Jonathan Hammer, Myriel Staack, Martin Sperfeld, Tom Haufschild, Nicolai Kallscheuer, Delia A. Narváez-Barragán, Carl-Eric Wegner, Kirsten Küsel, Shinichi Sunagawa, Georg Pohnert, Torsten Schubert, Einat Segev, Christian Jogler.<br>
 bioRxiv 2025.12.19.695462; [https://doi.org/10.64898/2025.12.19.695462](https://doi.org/10.64898/2025.12.19.695462)
 
-The mOTUs-db genomes were described here:
+The mOTUs-db v4.0 genomes were described here:
 
 > The mOTUs online database provides web-accessible genomic context to taxonomic profiling of microbial communities<br>
 Marija Dmitrijeva, Hans-Joachim Ruscheweyh, Lilith Feer, Kang Li, Samuel Miravet-Verde, Anna Sintsova, Daniel R Mende, Georg Zeller, Shinichi Sunagawa.<br>

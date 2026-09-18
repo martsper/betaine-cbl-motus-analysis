@@ -1,5 +1,10 @@
 # Betaine degradation and cobalamin biosynthesis analysis in mOTUs-db genomes
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22832080.svg)](https://doi.org/10.5281/zenodo.22832080)
+
+The version of this repository used for the manuscript is archived as
+**v1.0.0** on Zenodo: https://doi.org/10.5281/zenodo.22832080
+
 This repository contains the R workflow used to analyze genomic potential for cobalamin-dependent glycine betaine demethylation, cobalamin biosynthesis, and cobalamin-independent glycine betaine oxidation in mOTUs-db v4.0 genomes.
 
 The analysis starts from PyHMMER/Pfam count tables, filters for high-quality genomes (>= 90% completeness, <= 5% contamination), removes genomes that are not part of the Ocean Microbiomics Database (OMDB), calculates order-level prevalences, and exports iTOL-compatible files for visualization on the GTDB R220 bacterial tree.
@@ -92,20 +97,27 @@ output_itol/itol_heatmap_genes.txt
 output_itol/itol_colorstrip_groups.txt
 output_itol/itol_bar_n_genomes.txt
 ```
+## Citation
 
-## References
+If you use this code, please cite:
 
-The analysis is part of the following pre-print:
+> Sperfeld, M. (2026). *Betaine degradation and cobalamin biosynthesis analysis in mOTUs-db genomes* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.22832080
 
-> The glycine betaine-cobalamin feedback loop drives cross-feeding between marine bacteria and algae<br>
-Jonathan Hammer, Myriel Staack, Martin Sperfeld, Tom Haufschild, Nicolai Kallscheuer, Delia A. Narváez-Barragán, Carl-Eric Wegner, Kirsten Küsel, Shinichi Sunagawa, Georg Pohnert, Torsten Schubert, Einat Segev, Christian Jogler.<br>
-bioRxiv 2025.12.19.695462; [https://doi.org/10.64898/2025.12.19.695462](https://doi.org/10.64898/2025.12.19.695462)
+Citation metadata are also provided in `CITATION.cff`.
+
+## Related publication
+
+This analysis was developed for the following study:
+
+> The glycine betaine-cobalamin feedback loop drives cross-feeding between marine bacteria and algae  
+> Jonathan Hammer, Myriel Staack, Martin Sperfeld, Tom Haufschild, Nicolai Kallscheuer, Delia A. Narváez-Barragán, Carl-Eric Wegner, Kirsten Küsel, Shinichi Sunagawa, Georg Pohnert, Torsten Schubert, Einat Segev, Christian Jogler.  
+> bioRxiv 2025.12.19.695462; https://doi.org/10.64898/2025.12.19.695462
 
 The mOTUs-db v4.0 genomes were described here:
 
-> The mOTUs online database provides web-accessible genomic context to taxonomic profiling of microbial communities<br>
-Marija Dmitrijeva, Hans-Joachim Ruscheweyh, Lilith Feer, Kang Li, Samuel Miravet-Verde, Anna Sintsova, Daniel R Mende, Georg Zeller, Shinichi Sunagawa.<br>
-Nucleic Acids Research, Volume 53, Issue D1, 6 January 2025, Pages D797–D805, [https://doi.org/10.1093/nar/gkae1004](https://doi.org/10.1093/nar/gkae1004)
+> The mOTUs online database provides web-accessible genomic context to taxonomic profiling of microbial communities
+> Marija Dmitrijeva, Hans-Joachim Ruscheweyh, Lilith Feer, Kang Li, Samuel Miravet-Verde, Anna Sintsova, Daniel R Mende, Georg Zeller, Shinichi Sunagawa.<br>
+> Nucleic Acids Research, Volume 53, Issue D1, 6 January 2025, Pages D797–D805, [https://doi.org/10.1093/nar/gkae1004](https://doi.org/10.1093/nar/gkae1004)
 
 
 ## License
